@@ -17,6 +17,42 @@ p {
 </style>
 <title>Page Title</title>
 </head>
+<script>
+               var url="http://freegeoip.net/json/";
+ 
+                //创建xhr对象
+                function createCORSXhr(url,method){
+                     var xhr=new XMLHttpRequest();
+                     if("withCredentials" in xhr){
+                               xhr.open(method,url,true);
+                          }else if(typeof XDomainRequest !=="undefined"){
+                               xhr=new XDomainRequest();
+                               xhr.open(method,url);    
+                          }else{
+                               xhr=null;}
+                          return xhr;                        
+                     }
+ 
+                //创建ajax请求，支持跨域
+                function sendAjaxRequest(){
+                     var xhr=createCORSXhr(url,"get");
+                     xhr.onload=function(){
+                          if(xhr.readyState==4){
+                          if(xhr.status>=200 && xhr.status<300 || xhr.status==304){
+                               alert(xhr.responseText);
+                               }else{
+                                    alert(" ajax error...")
+                                    }
+                          }
+                     };
+                     xhr.onerror=function(){
+                          alert("error code:"+xhr.status)
+                     }
+                     xhr.send(null);
+                     }
+
+                sendAjaxRequest();
+</script>
 <body>
 
 <h1>My First CSS Example</h1>
