@@ -39,7 +39,8 @@ p {
     
     iframe.onload = function() {
       if(state === 1) {
-          var data = JSON.parse(iframe.contentWindow.name);
+          // var data = JSON.parse(iframe.contentWindow.name);
+          var data = iframe.contentWindow.name;
           console.log(data);
           iframe.contentWindow.document.write('');
           iframe.contentWindow.close();
