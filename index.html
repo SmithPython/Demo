@@ -18,50 +18,23 @@ p {
 <title>Page Title</title>
 </head>
 <body>
+<h1>XMLHttpRequest 对象</h1>
+
+<div id="demo">
+<p>让 AJAX 更改此文本。</p>
+<button type="button" onclick="loadDoc()">更改内容</button>
+</div>
+
 <script>
-               var url="https://www.w3school.com.cn/demo/music_list.xml";
-
- 
-                //创建xhr对象
-                function createCORSXhr(url,method){
-                     var xhr=new XMLHttpRequest();
-                     if("withCredentials" in xhr){
-                           alert(" ajax1");    
-xhr.open(method,url,true);
-                          }else if(typeof XDomainRequest !=="undefined"){
-alert(" ajax2");    
-                               xhr=new XDomainRequest();
-                               xhr.open(method,url);    
-                          }else{
-                               xhr=null;}
-                          return xhr;                        
-                     }
- 
-                //创建ajax请求，支持跨域
-                function sendAjaxRequest(){
-                     var xhr=createCORSXhr(url,"get");
-if(null == xhr){
-alert("xhr is null");
-return;
+function loadDoc() {
+  const xhttp = new XMLHttpRequest();
+  xhttp.onload = function() {
+    document.getElementById("demo").innerHTML = this.responseText;
+  }
+  xhttp.open("GET", "/demo/js/ajax_info.txt");
+  xhttp.send();
 }
-                     xhr.onload=function(){
-                          if(xhr.readyState==4){
-                          if(xhr.status>=200 && xhr.status<300 || xhr.status==304){
-                               alert(xhr.responseText);
-                               }else{
-                                    alert(" ajax error...");
-                                    }
-                          }
-                     };
-                     xhr.onerror=function(){
-                          alert("error code:"+xhr.status)
-                     }
-                     xhr.send();
-                     }
-
-                sendAjaxRequest();
 </script>
-
 
 <h1>My First CSS Example</h1>
 <p>This is a paragraph.</p>
