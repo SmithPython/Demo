@@ -22,7 +22,10 @@ p {
       var iframe = document.getElementById("proxy");
       iframe.onload = function(){
         var data = iframe.contentWindow.name;
-        alert("jlkjlj");
+        console.log(data+"one");
+        console.log(window.name+"two");
+        alert(data+"one");
+        alert(window.name+"two");
       };
         iframe.src = "proxy.html";
     }
