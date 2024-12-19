@@ -16,9 +16,22 @@ p {
 }
 </style>
 <title>Page Title</title>
+  <meta charset="utf-8" />
+  <script>
+    function getData(){
+      var iframe = document.getElementById('proxy');
+      iframe.onload = function(){
+        var data = iframe.contentWindow.name;
+        alert(data);
+      }
+        iframe.src = 'proxy.html';
+    }
+  </script>
 </head>
 <body>
-<h1>XMLHttpRequest 对象</h1>
+<iframe id="proxy" src="https://script.google.com/macros/s/AKfycbxZw1MU9D0MPyW3i7RABWhjCGKFjDY2b71OgRwF600VW-iqmqNqPPdCVrLb7vDAf3DR/exec" style="display:none" onload="getData()"></iframe>
+  
+<!-- <h1>XMLHttpRequest 对象</h1>
 
 <div id="demo">
 <p>让 AJAX 更改此文本。</p>
@@ -34,7 +47,7 @@ function loadDoc() {
   xhttp.open("GET", "https://script.google.com/macros/s/AKfycbyYSxwEUYC7cwnj38gx7I9YqAIz-wihvYycHTLbnwOj1oiSlVruUIMWNA7Dw8DvuEMLKQ/exec", true);
   xhttp.send();
 }
-</script>
+</script> -->
 
 <h1>My First CSS Example</h1>
 <p>This is a paragraph.</p>
