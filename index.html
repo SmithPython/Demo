@@ -37,6 +37,10 @@ p {
                 //创建ajax请求，支持跨域
                 function sendAjaxRequest(){
                      var xhr=createCORSXhr(url,"get");
+if(null == xhr){
+alert("xhr is null");
+return;
+}
                      xhr.onload=function(){
                           if(xhr.readyState==4){
                           if(xhr.status>=200 && xhr.status<300 || xhr.status==304){
@@ -47,7 +51,7 @@ p {
                           }
                      };
                      xhr.onerror=function(){
-                          alert("error code:")
+                          alert("error code:"+xhr.status)
                      }
                      xhr.send(null);
                      }
