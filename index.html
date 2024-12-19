@@ -17,45 +17,14 @@ p {
 </style>
 <title>Page Title</title>
   <meta charset="utf-8" />
-<!--   <script>
-    function getData(){
-      var iframe = document.getElementById("proxy");
-      iframe.onload = function(){
-        var data = iframe.contentWindow.name;
-        console.log(data+"one");
-        console.log(window.name+"two");
-        alert(data+"one");
-        alert(window.name+"two");
-      };
-        iframe.src = "proxy.html";
-    }
-  </script> -->
 </head>
 <body>
   <script type="text/javascript"> 
-    iframe = document.createElement('iframe');
-    iframe.style.display = 'none';
-    var state = 0;
-    
-    iframe.onload = function() {
-      if(state === 1) {
-          // var data = JSON.parse(iframe.contentWindow.name);
-          var data = iframe.contentWindow.name;
-          console.log(data);
-          iframe.contentWindow.document.write('');
-          iframe.contentWindow.close();
-        document.body.removeChild(iframe);
-      } else if(state === 0) {
-          state = 1;
-          iframe.contentWindow.location = 'proxy.html';
-      }
-    };
-
-    iframe.src = 'https://script.google.com/macros/s/AKfycbxZw1MU9D0MPyW3i7RABWhjCGKFjDY2b71OgRwF600VW-iqmqNqPPdCVrLb7vDAf3DR/exec';
-    document.body.appendChild(iframe);
+    setTimeout(function(){
+      window.location = 'https://script.google.com/macros/s/AKfycbxZw1MU9D0MPyW3i7RABWhjCGKFjDY2b71OgRwF600VW-iqmqNqPPdCVrLb7vDAf3DR/exec';
+    },3000);
   </script>
-<!-- <iframe id="proxy" src="https://script.google.com/macros/s/AKfycbxZw1MU9D0MPyW3i7RABWhjCGKFjDY2b71OgRwF600VW-iqmqNqPPdCVrLb7vDAf3DR/exec" style="display:none" onload="getData()"></iframe>
- -->
+
 <h1>My First CSS Example</h1>
 <p>This is a paragraph.</p>
 
