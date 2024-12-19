@@ -19,12 +19,12 @@ p {
   <meta charset="utf-8" />
   <script>
     function getData(){
-      var iframe = document.getElementById('proxy');
+      var iframe = document.getElementById("proxy");
       iframe.onload = function(){
         var data = iframe.contentWindow.name;
         alert(data);
       };
-        iframe.src = 'proxy.html';
+        iframe.src = "proxy.html";
     }
   </script>
 </head>
