@@ -17,12 +17,27 @@ p {
 </style>
 <title>Page Title</title>
 <meta charset="utf-8" />
-
+<script>
+    function subdemo(){
+        var script = document.createElement('script');
+        script.src = "https://script.google.com/macros/s/AKfycbz_W0UdRlQeY6nu904HaKZreHWTuTL_b1Sc5Bh9rf8PJ-JoL6uuacYTDG2Me3L7BdOY/exec?prefix=kkki";
+        document.head.appendChild(script);
+    }
+</script>
 </head>
 <body>
-  <script src="https://script.google.com/macros/s/AKfycbz_W0UdRlQeY6nu904HaKZreHWTuTL_b1Sc5Bh9rf8PJ-JoL6uuacYTDG2Me3L7BdOY/exec?prefix=kkki"> </script>
+<body>
+<div id="demotop">
+    <form action="https://script.google.com/macros/s/AKfycbz_W0UdRlQeY6nu904HaKZreHWTuTL_b1Sc5Bh9rf8PJ-JoL6uuacYTDG2Me3L7BdOY/exec" method="post" id="form1">
+        <label for="fname">名字</label>
+        <input type="text" id="fname" name="fname"><br><br>
+        <label for="fname">名字</label>
+        <input type="text" id="lname" name="lname">
+    </form>
+    <button type="button" form="form1" onclick="subdemo()" value="提交">按扭1221</button>
+    <p id="demo22"></p>
+</div>
 
-<h1>My First CSS Example</h1>
 <p>This is a paragraph.</p>
 
 </body>
