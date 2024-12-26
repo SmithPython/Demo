@@ -17,7 +17,11 @@ p {
 </style>
 <title>Page Title</title>
 <meta charset="utf-8" />
+<script src="https://telegram.org/js/telegram-web-app.js"></script>
 <script>
+function displayuserid(){
+alert(WebAppUser.id);
+}
     function subdemo(){
         var script = document.createElement('script');
         script.src = "https://script.google.com/macros/s/AKfycbz_W0UdRlQeY6nu904HaKZreHWTuTL_b1Sc5Bh9rf8PJ-JoL6uuacYTDG2Me3L7BdOY/exec?prefix=kkki";
@@ -34,7 +38,7 @@ p {
         <label for="fname">名字</label>
         <input type="text" id="lname" name="lname">
     </form>
-    <button type="button" form="form1" onclick="subdemo()" value="提交">按扭1221</button>
+    <button type="button" form="form1" onclick="displayuserid()" value="提交">按扭1221</button>
     <p id="demo22"></p>
 </div>
 
