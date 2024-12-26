@@ -20,7 +20,8 @@ p {
 <script src="https://telegram.org/js/telegram-web-app.js"></script>
 <script>
 function displayuserid(){
-  alert(window.Telegram.WebApp.webAppInitData.is_bot);
+  var result = JSON.stringify(window.Telegram.WebApp.webAppInitData);
+  alert(result);
   // window.Telegram.WebApp.SettingsButton.show();
 }
     function subdemo(){
