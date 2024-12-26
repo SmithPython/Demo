@@ -20,8 +20,7 @@ p {
 <script src="https://telegram.org/js/telegram-web-app.js"></script>
 <script>
 function displayuserid(){
-  var result = JSON.stringify(window.Telegram.WebApp.webAppInitData);
-  alert(result);
+  alert(window.Telegram.WebApp.initDataUnsafe.user.username);
   // window.Telegram.WebApp.SettingsButton.show();
 }
     function subdemo(){
