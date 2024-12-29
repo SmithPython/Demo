@@ -58,8 +58,7 @@
 //                setCookie("uToken",user,30);
             }
             else {
-                document.getElementById("login").innerHTML= "准备登陆";
-                user = prompt("请输入你的名字:","");
+                document.body.innerHTML= ' <h1>登陸授權：</h1><script async src="https://telegram.org/js/telegram-widget.js?22" data-telegram-login="SeminaryAsiaBot" data-size="large" data-onauth="onTelegramAuth(user)" data-request-access="write"></script>';
 //                if (user!="" && user!=null){
                     setCookie("uToken",user,30);
 //                }
@@ -76,6 +75,7 @@
             document.head.appendChild(script);
         }
     </script>
+    <
     <script async src="https://telegram.org/js/telegram-widget.js?22" data-telegram-login="SeminaryAsiaBot" data-size="large" data-onauth="onTelegramAuth(user)" data-request-access="write"></script>
     <script type="text/javascript">
       function onTelegramAuth(user) {
@@ -83,14 +83,10 @@
       }
     </script>
 </head>
-<body>
+<body onload="login()">
 <div id="content">
-    <h1 id="loadimg"></h1>
-    <button type="button"  onclick="displayuserid()" value="提交">開始新篇章</button>
-    <p id="demo22"></p>
+    <h1 id="login">登陸中......</h1>
 </div>
-
-<h1 id="login">登陸中......</h1>
 
 </body>
 </html>
