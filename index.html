@@ -3,29 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <title>Page Title</title>
-    <style>
-    body {
-      background-color: white;
-    }
-
-    h1 {
-      text-align: center;
-    }
-
-    p {
-      font-family: verdana;
-      font-size: 20px;
-    }
-    </style>
-    <!--<script src="https://telegram.org/js/telegram-web-app.js"></script>-->
     <script>
-        function setCookie(cname,cvalue,exdays){
-            var d = new Date();
-//            d.setTime(d.getTime()+(exdays*24*60*60*1000));
-            d.setTime(d.getTime()+(6*1000));
-            var expires = "expires="+d.toGMTString();
-            document.cookie = cname+"="+cvalue+"; "+expires;
-        }
         function getCookie(cname){
             var name = cname + "=";
             var ca = document.cookie.split(';');
@@ -36,33 +14,20 @@
             return "";
         }
 
-        function onTelegramAuth(user) {
-            alert('Logged in as ' + user.first_name + ' ' + user.last_name + ' (' + user.id + (user.username ? ', @' + user.username : '') + ')');
-        }
         function login(){
             if (true != navigator.cookieEnabled){
-                document.getElementById("login").innerHTML= "Cookies 不可用";
+                window.location.replace("errercookie.html");
                 return;
             }
             var user=getCookie("uToken");
             if (user!=""){
-                document.getElementById("login").innerHTML= "已登陆";
-//                setCookie("uToken",user,30);
-            }
-            else {
+                window.location.replace("quiz.html");
+            } else {
                 window.location.replace("login.html");
-//                if (user!="" && user!=null){
-                    // setCookie("uToken",user,30);
-//                }
             }
         }
-
     </script>
 </head>
 <body onload="login()">
-<div id="content">
-    <h1 id="login">登陸中......</h1>
-</div>
-
 </body>
 </html>
