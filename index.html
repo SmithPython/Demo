@@ -35,18 +35,10 @@
             }
             return "";
         }
-//        function checkCookie(){
-//            var user=getCookie("username");
-//            if (user!=""){
-//                alert("欢迎 " + user + " 再次访问");
-//            }
-//            else {
-//                user = prompt("请输入你的名字:","");
-//                if (user!="" && user!=null){
-//                    setCookie("username",user,30);
-//                }
-//            }
-//        }
+
+        function onTelegramAuth(user) {
+            alert('Logged in as ' + user.first_name + ' ' + user.last_name + ' (' + user.id + (user.username ? ', @' + user.username : '') + ')');
+        }
         function login(){
             if (true != navigator.cookieEnabled){
                 document.getElementById("login").innerHTML= "Cookies 不可用";
@@ -58,29 +50,13 @@
 //                setCookie("uToken",user,30);
             }
             else {
-                document.body.innerHTML= ' <h1>登陸授權：</h1><script async src="https://telegram.org/js/telegram-widget.js?22" data-telegram-login="SeminaryAsiaBot" data-size="large" data-onauth="onTelegramAuth(user)" data-request-access="write"></script>';
+                document.body.innerHTML= ' uyubyuv';
 //                if (user!="" && user!=null){
                     setCookie("uToken",user,30);
 //                }
             }
         }
 
-    function displayuserid(){
-      alert(window.Telegram.WebApp.initDataUnsafe.user.id);
-      // window.Telegram.WebApp.SettingsButton.show();
-    }
-        function subdemo(){
-            var script = document.createElement('script');
-            script.src = "https://script.google.com/macros/s/AKfycbz_W0UdRlQeY6nu904HaKZreHWTuTL_b1Sc5Bh9rf8PJ-JoL6uuacYTDG2Me3L7BdOY/exec?prefix=kkki";
-            document.head.appendChild(script);
-        }
-    </script>
-    
-  
-    <script type="text/javascript">
-      function onTelegramAuth(user) {
-        alert('Logged in as ' + user.first_name + ' ' + user.last_name + ' (' + user.id + (user.username ? ', @' + user.username : '') + ')');
-      }
     </script>
 </head>
 <body onload="login()">
