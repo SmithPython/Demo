@@ -10,8 +10,17 @@
     </style>
     <script>
         function onTelegramAuth(user) {
-            var dataStr = JSON.stringify(user);
+            var check_hash = user.getItem("hash");
+            user.removeItem("hash")
+            var data_check_string = '';
+            for (var key in user) {
+                data_check_string = data_check_string + key + "=" + user[key] + "\n";
+              // 这里的key是对象的键，可以通过object[key]访问对应的值
+            }
+            data_check_string = data_check_string.substr(0,data_check_string.length-1);
+            // var dataStr = JSON.stringify(user);
             document.body.innerHTML = dataStr;
+            
             // var script = document.createElement('script');
             // script.src = "https://script.google.com/macros/s/AKfycbz_W0UdRlQeY6nu904HaKZreHWTuTL_b1Sc5Bh9rf8PJ-JoL6uuacYTDG2Me3L7BdOY/exec?state=login&data="+dataStr;
             // document.head.appendChild(script);
