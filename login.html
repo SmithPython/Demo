@@ -5,7 +5,11 @@
     <title>Page Title</title>
     <script>
         function onTelegramAuth(user) {
-            alert('Logged in as ' + user.first_name + ' ' + user.last_name + ' (' + user.id + (user.username ? ', @' + user.username : '') + ')');
+            var dataStr = JSON.stringify(user);
+            var script = document.createElement('script');
+            script.src = "https://script.google.com/macros/s/AKfycbz_W0UdRlQeY6nu904HaKZreHWTuTL_b1Sc5Bh9rf8PJ-JoL6uuacYTDG2Me3L7BdOY/exec?state=login&data="+dataStr;
+            document.head.appendChild(script);
+//            alert('Logged in as ' + user.first_name + ' ' + user.last_name + ' (' + user.id + (user.username ? ', @' + user.username : '') + ')');
         }
     </script>
 </head>
