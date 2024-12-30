@@ -10,7 +10,7 @@
     </style>
     <script>
         function onTelegramAuth(user) {
-            var check_hash = user.["hash"];
+            var check_hash = user.hash;
             delete user.hash;
             var data_check_string = '';
             for (var key in user) {
