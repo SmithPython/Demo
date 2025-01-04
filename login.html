@@ -20,11 +20,11 @@
         transform: translate(-50%, -50%);
     }
     </style>
-    <script src="https://telegram.org/js/telegram-web-app.js?56"></script>
+    <script src="https://telegram.org/js/telegram-web-app.js"></script>
     <script>
         function test(){
             try{
-                const userId = window.Telegram.WebApp.initDataUnsafe.user.id;
+                var userId = window.Telegram.WebApp.initDataUnsafe.user.id;
                  alert("你可以的");
             }catch(e){
                 alert("请用TElegramr打开");
