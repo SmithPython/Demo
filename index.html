@@ -28,7 +28,8 @@
                 //alert(window.Telegram.WebApp.platform);
                 
                 if(window.Telegram.WebApp.DeviceOrientation.isStarted){
-                    alert("DeviceOrientationyes");
+                    alert("DeviceOrientationyes is stop");
+                    window.Telegram.WebApp.DeviceOrientation.stop()
                 }else{
                     alert("DeviceOrientation is no");
                 }
@@ -38,21 +39,37 @@
         }
         function test2(){
             if(window.Telegram.WebApp.Gyroscope.isStarted){
-                    alert("Gyroscopeyes");
+                    alert("Gyroscopeyes is stop");
+                window.Telegram.WebApp.Gyroscope.stop();
                 }else{
                     alert("Gyroscopeyes is no");
             }
         }
+        function startDeviceOrientation(){
+            var obj = new DeviceOrientationStartParams();
+            window.Telegram.WebApp.DeviceOrientation.start(obj, function (){
+                alert("ok,start DeviceOrientation"");
+            });
+                    
+            
+        }
+        function startGyroscope(){
+            var obj = new GyroscopeStartParams();
+            window.Telegram.WebApp.Gyroscope.start(obj, function (){
+                alert("ok,start Gyroscope");
+            });
+        }
+        
     </script>
 </head>
 <body >
     <div>
         <h1 id="login">测试页..</h1>
         <!--<h1 id="loadimg"></h1>-->
-        <button type="button"  onclick="login()" value="提交">用戶ID</button>
-        <button type="button"  onclick="test2()" value="提交">用戶平台</button>
-        <button type="button"  onclick="displayuserbgcolor()" value="提交">用戶議題背景色</button>
-        <button type="button"  onclick="displayuserbackgroundColor()" value="提交">當前背景色</button>
+        <button type="button"  onclick="login()" value="提交">是否開啟了方向</button>
+        <button type="button"  onclick="test2()" value="提交">是否開啟了陀羅</button>
+        <button type="button"  onclick="startDeviceOrientation()" value="提交">開啟方向</button>
+        <button type="button"  onclick="startGyroscope()" value="提交">開啟陀羅</button>
         <!--<p id="demo22"></p>-->
     </div>
 </body>
