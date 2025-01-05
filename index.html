@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Page Title</title>
+    <script>
+        function getCookie(cname){
+            var name = cname + "=";
+            var ca = document.cookie.split(';');
+            for(var i=0; i<ca.length; i++) {
+                var c = ca[i].trim();
+                if (c.indexOf(name)==0) { return c.substring(name.length,c.length); }
+            }
+            return "";
+        }
+
+        function login(){
+            if (true != navigator.cookieEnabled){
+                window.location.replace("errercookie.html");
+                return;
+            }
+            var user=getCookie("uToken");
+            if (user!=""){
+                window.location.replace("quiz.html");
+            } else {
+                
+                window.location.replace("index2.html");
+            }
+        }
+    </script>
+</head>
+<body onload="login()">
+</body>
+</html>
