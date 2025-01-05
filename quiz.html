@@ -18,9 +18,13 @@
     }
     </style>
     <script src="https://telegram.org/js/telegram-web-app.js"></script>
-<script>
+
+
+</head>
+<body>
+    <script>
     function displayuserid(){
-        alert(window.Telegram.WebApp.initDataUnsafe.user.id);
+        alert(window.Telegram.WebApp.initDataUnsafe.user.username);
     }
     function displayuserplatform(){
         alert(window.Telegram.WebApp.platform);
@@ -33,9 +37,6 @@
     }
     
 </script>
-
-</head>
-<body>
     <div id="content">
         <h1 id="login">来到测试页......</h1>
         <!--<h1 id="loadimg"></h1>-->
