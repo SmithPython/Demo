@@ -1,33 +1,51 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <title>Page Title</title>
-    <script>
-        function getCookie(cname){
-            var name = cname + "=";
-            var ca = document.cookie.split(';');
-            for(var i=0; i<ca.length; i++) {
-                var c = ca[i].trim();
-                if (c.indexOf(name)==0) { return c.substring(name.length,c.length); }
-            }
-            return "";
-        }
+<style>
+body {
+  background-color: white;
+}
 
-        function login(){
-            if (true != navigator.cookieEnabled){
-                window.location.replace("errercookie.html");
-                return;
-            }
-            var user=getCookie("uToken");
-            if (user!=""){
-                window.location.replace("quiz.html");
-            } else {
-                window.location.replace("login.html");
-            }
-        }
-    </script>
+h1 {
+  text-align: center;
+}
+
+p {
+  font-family: verdana;
+  font-size: 20px;
+}
+</style>
+<title>Page Title</title>
+<meta charset="utf-8" />
+<script src="https://telegram.org/js/telegram-web-app.js"></script>
+<script>
+function displayuserid(){
+  var result = JSON.stringify(window.Telegram.WebApp.webAppInitData);
+  alert(result);
+  alert(window.Telegram.WebApp.initDataUnsafe.user.username);
+  // window.Telegram.WebApp.SettingsButton.show();
+}
+    function subdemo(){
+        var script = document.createElement('script');
+        script.src = "https://script.google.com/macros/s/AKfycbz_W0UdRlQeY6nu904HaKZreHWTuTL_b1Sc5Bh9rf8PJ-JoL6uuacYTDG2Me3L7BdOY/exec?prefix=kkki";
+        document.head.appendChild(script);
+    }
+</script>
 </head>
-<body onload="login()">
+<body>
+<body>
+<div id="demotop">
+    <form action="https://script.google.com/macros/s/AKfycbz_W0UdRlQeY6nu904HaKZreHWTuTL_b1Sc5Bh9rf8PJ-JoL6uuacYTDG2Me3L7BdOY/exec" method="post" id="form1">
+        <label for="fname">名字</label>
+        <input type="text" id="fname" name="fname"><br><br>
+        <label for="fname">名字</label>
+        <input type="text" id="lname" name="lname">
+    </form>
+    <button type="button" form="form1" onclick="displayuserid()" value="提交">按扭1221</button>
+    <p id="demo22"></p>
+</div>
+
+<p>This is a paragraph.</p>
+
 </body>
 </html>
