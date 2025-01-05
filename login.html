@@ -20,8 +20,22 @@
         transform: translate(-50%, -50%);
     }
     </style>
-    <script src="https://telegram.org/js/telegram-web-app.js"></script>
-    <script>
+    <script src="https://telegram.org/js/telegram-web-app.js?56"></script>
+    
+<script>
+    function displayuserid(){
+        alert(window.Telegram.WebApp.initDataUnsafe.user.id);
+    }
+    function displayuserplatform(){
+        alert(window.Telegram.WebApp.platform);
+    }
+    function displayuserbgcolor(){
+        alert(window.Telegram.WebApp.themeParams.bg_color);
+    }
+    function displayuserbackgroundColor(){
+        alert(window.Telegram.WebApp.backgroundColor);
+    }
+
         function test(){
 var req = navigator.userAgent;
 
@@ -53,7 +67,16 @@ alert(window.Telegram.WebApp.platform);
         <h1 style="position: relative;text-align: center">说明：</h1>
         <p style="font-size:17px">为防止知识滥用，需授权登陆。将跳转到Telegram官网授权页面进行登陆授权，您将在Telegram官网授权页面输入的登陆手机号码，本站无法或无能力获取。本站将获取您的Telegram账号ID作为唯一凭证。</p>
     </div>
-<script async src="https://telegram.org/js/telegram-widget.js?22" data-telegram-login="SeminaryAsiaBot" data-size="large" data-onauth="onTelegramAuth(user)" data-request-access="write"></script>
+    <div>
+        <h1 id="login">来到测试页......</h1>
+        <!--<h1 id="loadimg"></h1>-->
+        <button type="button"  onclick="displayuserid()" value="提交">用戶ID</button>
+        <button type="button"  onclick="displayuserplatform()" value="提交">用戶平台</button>
+        <button type="button"  onclick="displayuserbgcolor()" value="提交">用戶議題背景色</button>
+        <button type="button"  onclick="displayuserbackgroundColor()" value="提交">當前背景色</button>
+        <!--<p id="demo22"></p>-->
+    </div>
+<!--<script async src="https://telegram.org/js/telegram-widget.js?22" data-telegram-login="SeminaryAsiaBot" data-size="large" data-onauth="onTelegramAuth(user)" data-request-access="write"></script>-->
 
 </body>
 </html>
