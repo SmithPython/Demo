@@ -48,22 +48,20 @@
             }
         }
         function startDeviceOrientation1(){
-            if(window.Telegram.WebApp.isOrientationLocked){
-                alert("方向鎖");
-            } else {
-                alert("方向沒鎖");
-            }
+            window.Telegram.WebApp.unlockOrientation();
+            alert("解鎖了方向");
            // var obj = new DeviceOrientationStartParams(1000);
           //  window.Telegram.WebApp.DeviceOrientation.start(obj, function (){
                 //alert("ok,start DeviceOrientation");
            //});
        }
         function startGyroscope1(){
-            alert("馬上開啟Gyroscope");
-            var obj = new GyroscopeStartParams(1000, false);
-            window.Telegram.WebApp.Gyroscope.start(obj, function (){
-                alert("ok,start Gyroscope");
-            });
+            window.Telegram.WebApp.lockOrientation();
+            alert("鎖定方向");
+          //  var obj = new GyroscopeStartParams(1000, false);
+         //   window.Telegram.WebApp.Gyroscope.start(obj, function (){
+           //     alert("ok,start Gyroscope");
+          //  });
         }
         
     </script>
