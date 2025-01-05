@@ -48,11 +48,15 @@
             }
         }
         function startDeviceOrientation1(){
-            alert("馬上開啟DeviceOrientation");
-            var obj = new DeviceOrientationStartParams(1000);
-            window.Telegram.WebApp.DeviceOrientation.start(obj, function (){
-                alert("ok,start DeviceOrientation");
-           });
+            if(!window.Telegram.WebApp.isOrientationLocked){
+                alert("方向沒鎖");
+            } else {
+                alert("方向鎖了");
+            }
+           // var obj = new DeviceOrientationStartParams(1000);
+          //  window.Telegram.WebApp.DeviceOrientation.start(obj, function (){
+                //alert("ok,start DeviceOrientation");
+           //});
        }
         function startGyroscope1(){
             alert("馬上開啟Gyroscope");
