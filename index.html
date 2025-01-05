@@ -46,15 +46,15 @@
             }
         }
         function startDeviceOrientation1(){
-            
-        
-            var obj = new DeviceOrientationStartParams();
+            alert("馬上開啟DeviceOrientation");
+            var obj = new DeviceOrientationStartParams(1000);
             window.Telegram.WebApp.DeviceOrientation.start(obj, function (){
                 alert("ok,start DeviceOrientation");
            });
        }
         function startGyroscope1(){
-            var obj = new GyroscopeStartParams();
+            alert("馬上開啟Gyroscope");
+            var obj = new GyroscopeStartParams(1000, false);
             window.Telegram.WebApp.Gyroscope.start(obj, function (){
                 alert("ok,start Gyroscope");
             });
