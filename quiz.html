@@ -17,14 +17,31 @@
       font-size: 20px;
     }
     </style>
-
+<script>
+    function displayuserid(){
+        alert(window.Telegram.WebApp.initDataUnsafe.user.id);
+    }
+    function displayuserplatform(){
+        alert(window.Telegram.WebApp.platform);
+    }
+    function displayuserbgcolor(){
+        alert(window.Telegram.WebApp.themeParams.bg_color);
+    }
+    function displayuserbackgroundColor(){
+        alert(window.Telegram.WebApp.backgroundColor);
+    }
+    
+</script>
 
 </head>
 <body>
     <div id="content">
         <h1 id="login">来到测试页......</h1>
         <!--<h1 id="loadimg"></h1>-->
-        <!--<button type="button"  onclick="displayuserid()" value="提交">開始新篇章</button>-->
+        <button type="button"  onclick="displayuserid()" value="提交">用戶ID</button>
+        <button type="button"  onclick="displayuserplatform()" value="提交">用戶平台</button>
+        <button type="button"  onclick="displayuserbgcolor()" value="提交">用戶議題背景色</button>
+        <button type="button"  onclick="displayuserbackgroundColor()" value="提交">當前背景色</button>
         <!--<p id="demo22"></p>-->
     </div>
 </body>
