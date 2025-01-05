@@ -28,12 +28,19 @@
                 //alert(window.Telegram.WebApp.platform);
                 
                 if(window.Telegram.WebApp.DeviceOrientation.isStarted){
-                    alert("yes");
+                    alert("DeviceOrientationyes");
                 }else{
-                    alert("no");
+                    alert("DeviceOrientation is no");
                 }
                 //alert(window.Telegram.WebApp.version);
                // window.location.replace("index2.html");
+            }
+        }
+        function test2(){
+            if(window.Telegram.WebApp.Gyroscope.isStarted){
+                    alert("Gyroscopeyes");
+                }else{
+                    alert("Gyroscopeyes is no");
             }
         }
     </script>
@@ -43,7 +50,7 @@
         <h1 id="login">测试页..</h1>
         <!--<h1 id="loadimg"></h1>-->
         <button type="button"  onclick="login()" value="提交">用戶ID</button>
-        <button type="button"  onclick="displayuserplatform()" value="提交">用戶平台</button>
+        <button type="button"  onclick="test2()" value="提交">用戶平台</button>
         <button type="button"  onclick="displayuserbgcolor()" value="提交">用戶議題背景色</button>
         <button type="button"  onclick="displayuserbackgroundColor()" value="提交">當前背景色</button>
         <!--<p id="demo22"></p>-->
