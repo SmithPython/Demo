@@ -23,11 +23,12 @@
     <script src="https://telegram.org/js/telegram-web-app.js"></script>
     <script>
         function test(){
-var req = new XMLHttpRequest();
-req.open('GET', document.location, false);
-req.send(null);
-var headers = req.getAllResponseHeaders().toLowerCase();
-alert(headers);
+var req = navigator.useragent;
+//var req = new XMLHttpRequest();
+//req.open('GET', document.location, false);
+//req.send(null);
+//var headers = req.getAllResponseHeaders().toLowerCase();
+alert(req);
             //try{
    //alert(window.Telegram.WebApp.platform);
                //  alert(userId);
