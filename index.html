@@ -25,9 +25,14 @@
             if (user!=""){
                 window.location.replace("quiz.html");
             } else {
-                alert(window.Telegram.WebApp.platform);
-                alert(window.Telegram.WebApp.BiometricManager.deviceId);
-                alert(window.Telegram.WebApp.version);
+                //alert(window.Telegram.WebApp.platform);
+                
+                if(window.Telegram.WebApp.Gyroscope.isStarted){
+                    alert("yes");
+                }else{
+                    alert("no");
+                }
+                //alert(window.Telegram.WebApp.version);
                // window.location.replace("index2.html");
             }
         }
