@@ -29,7 +29,7 @@
                 
                 if(window.Telegram.WebApp.DeviceOrientation.isStarted){
                     alert("DeviceOrientationyes is stop");
-                    //window.Telegram.WebApp.DeviceOrientation.stop()
+                    window.Telegram.WebApp.DeviceOrientation.stop();
                 }else{
                     alert("DeviceOrientation is no");
                 }
@@ -40,7 +40,7 @@
         function test2(){
             if(window.Telegram.WebApp.Gyroscope.isStarted){
                     alert("Gyroscopeyes is stop");
-                //window.Telegram.WebApp.Gyroscope.stop();
+                window.Telegram.WebApp.Gyroscope.stop();
                 }else{
                     alert("Gyroscopeyes is no");
             }
