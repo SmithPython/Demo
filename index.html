@@ -23,8 +23,10 @@
             if (user!=""){
                 window.location.replace("quiz.html");
             } else {
-                
-                window.location.replace("index2.html");
+                alert(window.Telegram.WebApp.platform);
+                alert(window.Telegram.WebApp.BiometricManager.deviceId);
+                alert(window.Telegram.WebApp.version);
+               // window.location.replace("index2.html");
             }
         }
     </script>
