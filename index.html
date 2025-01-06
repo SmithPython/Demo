@@ -32,7 +32,8 @@
                     window.Telegram.WebApp.DeviceOrientation.stop();
                 }else{
                     //alert("DeviceOrientation is no");
-                    alert(window.Telegram.WebApp.initData);
+                    var data = window.Telegram.WebApp.initData;
+                    document.getElementById("data").innerHTML(data);
                 }
                 //alert(window.Telegram.WebApp.version);
                // window.location.replace("index2.html");
@@ -76,5 +77,6 @@
         <button type="button"  onclick="startGyroscope1()" value="提交">開啟陀羅</button>
         <!--<p id="demo22"></p>-->
     </div>
+    <div id="data"></div>
 </body>
 </html>
