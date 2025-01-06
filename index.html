@@ -67,9 +67,9 @@ alert(navigator.userAgent);
                 refresh_rate:1000,
                 need_absolute: false
             };
-          //  window.Telegram.WebApp.DeviceOrientation.start(, function (){
-         //       alert("ok,start DeviceOrientation");
-         //  });
+            window.Telegram.WebApp.DeviceOrientation.start(obj, function (){
+                alert("ok,start DeviceOrientation");
+           });
        }
         function startGyroscope1(){
           //  window.Telegram.WebApp.lockOrientation();
@@ -78,9 +78,9 @@ alert(navigator.userAgent);
             var obj = {
                 refresh_rate:1000
             };
-         //   window.Telegram.WebApp.Gyroscope.start(obj, function (){
-        //        alert("ok,start Gyroscope");
-       //     });
+            window.Telegram.WebApp.Gyroscope.start(obj, function (){
+                alert("ok,start Gyroscope");
+            });
         }
         
     </script>
