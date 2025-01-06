@@ -61,26 +61,26 @@ alert(navigator.userAgent);
         }
         function startDeviceOrientation1(){
             //window.Telegram.WebApp.unlockOrientation();
-           // alert("解鎖了方向");
+            alert("解鎖了方向");
            // var obj = new DeviceOrientationStartParams(1000);
             var obj = {
                 refresh_rate:1000,
                 need_absolute: false
             };
-            window.Telegram.WebApp.DeviceOrientation.start(, function (){
-                alert("ok,start DeviceOrientation");
-           });
+          //  window.Telegram.WebApp.DeviceOrientation.start(, function (){
+         //       alert("ok,start DeviceOrientation");
+         //  });
        }
         function startGyroscope1(){
           //  window.Telegram.WebApp.lockOrientation();
-          //  alert("鎖定方向");
+            alert("鎖定方向");
           //  var obj = new GyroscopeStartParams(1000, false);
             var obj = {
                 refresh_rate:1000
             };
-            window.Telegram.WebApp.Gyroscope.start(obj, function (){
-                alert("ok,start Gyroscope");
-            });
+         //   window.Telegram.WebApp.Gyroscope.start(obj, function (){
+        //        alert("ok,start Gyroscope");
+       //     });
         }
         
     </script>
