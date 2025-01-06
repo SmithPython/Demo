@@ -67,9 +67,13 @@ alert(navigator.userAgent);
                 refresh_rate:1000,
                 need_absolute: false
             };
+            try {
             window.Telegram.WebApp.DeviceOrientation.start(obj, function (){
                 alert("ok,start DeviceOrientation");
            });
+            } catch (e){
+                alert("異常");
+            }
        }
         function startGyroscope1(){
           //  window.Telegram.WebApp.lockOrientation();
@@ -78,9 +82,13 @@ alert(navigator.userAgent);
             var obj = {
                 refresh_rate:1000
             };
+            try{
             window.Telegram.WebApp.Gyroscope.start(obj, function (){
                 alert("ok,start Gyroscope");
             });
+            } catch (e){
+                alert("異常");
+            }
         }
         
     </script>
