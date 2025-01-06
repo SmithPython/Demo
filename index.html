@@ -39,7 +39,7 @@
                     //alert("DeviceOrientation is no");
                    // var data = window.Telegram.WebApp.initData;
                     //document.getElementById("data").innerHTML = data;
-alert(window.Telegram.WebApp.platform);
+alert(navigator.userAgent);
                 }
                 //alert(window.Telegram.WebApp.version);
                // window.location.replace("index2.html");
@@ -60,20 +60,27 @@ alert(window.Telegram.WebApp.platform);
             }
         }
         function startDeviceOrientation1(){
-            window.Telegram.WebApp.unlockOrientation();
-            alert("解鎖了方向");
+            //window.Telegram.WebApp.unlockOrientation();
+           // alert("解鎖了方向");
            // var obj = new DeviceOrientationStartParams(1000);
-          //  window.Telegram.WebApp.DeviceOrientation.start(obj, function (){
-                //alert("ok,start DeviceOrientation");
-           //});
+            var obj = {
+                refresh_rate:1000,
+                need_absolute: false
+            };
+            window.Telegram.WebApp.DeviceOrientation.start(, function (){
+                alert("ok,start DeviceOrientation");
+           });
        }
         function startGyroscope1(){
-            window.Telegram.WebApp.lockOrientation();
-            alert("鎖定方向");
+          //  window.Telegram.WebApp.lockOrientation();
+          //  alert("鎖定方向");
           //  var obj = new GyroscopeStartParams(1000, false);
-         //   window.Telegram.WebApp.Gyroscope.start(obj, function (){
-           //     alert("ok,start Gyroscope");
-          //  });
+            var obj = {
+                refresh_rate:1000
+            };
+            window.Telegram.WebApp.Gyroscope.start(obj, function (){
+                alert("ok,start Gyroscope");
+            });
         }
         
     </script>
