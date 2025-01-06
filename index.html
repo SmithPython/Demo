@@ -52,8 +52,11 @@ alert(window.Telegram.WebApp.platform);
                 }else{
                     //alert("Gyroscopeyes is no");
                 //alert(window.Telegram.WebApp.viewportHeight);
-
-alert(window.Telegram.WebApp.platform);
+                var popup = {
+                    titel:"notice",
+                    message:"u should use telegram"
+                };
+                window.Telegram.WebApp.showPopup(popup);
             }
         }
         function startDeviceOrientation1(){
